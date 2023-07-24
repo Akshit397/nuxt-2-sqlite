@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     async getUsers() {
-      const { users } = await this.$http.$get('/api/users');
+      const { users } = await this.$http.$get(`${window.location.origin}/api/users`)
       this.userList = users
       console.log('users: ', users);
     }
