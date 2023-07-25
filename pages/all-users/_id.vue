@@ -6,6 +6,9 @@
     <button @click="getUsers()">
       CLICK ME
     </button>
+    <button @click="getUsersFromLocalStorage()">
+      GET USERS from LOCAL
+    </button>
   </div>
 </template>
 
@@ -22,6 +25,11 @@ export default {
       const { users } = await this.$http.$get(`${window.location.origin}/api/users`)
       this.userList = users
       console.log('users: ', users);
+    },
+
+    getUsersFromLocalStorage() {
+      this.userList = localStorage.getItem('users')
+      console.log('this.userList: ', this.userList);
     }
   }
 }
