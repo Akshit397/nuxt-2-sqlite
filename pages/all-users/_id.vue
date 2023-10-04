@@ -17,16 +17,23 @@ export default {
   name: 'AllUsers',
   data() {
     return {
-      userList: []
+      userList: [],
+      meta: []
     }
   },
+  mounted() {
+    setTimeout(() => {
+      console.log('this.meta: ', this.meta)
+      this.meta = [
+        { property: "og:title", content: 'Particular Title' },
+        { property: "og:description", content: 'Particular Desc' },
+        { property: "og:image", content: 'https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896' },
+        // { property: "twitter:title", content: 'Overriden Title' },
+      ]
+    }, 2000);
+  },
   head: {
-    meta: [
-      { property: "og:title", content: 'Particular Title' },
-      { property: "og:description", content: 'Particular Desc' },
-      { property: "og:image", content: 'https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896' },
-      // { property: "twitter:title", content: 'Overriden Title' },
-    ]
+    meta: this.meta,
   },
   methods: {
     async getUsers() {
@@ -38,7 +45,7 @@ export default {
     getUsersFromLocalStorage() {
       this.userList = localStorage.getItem('users')
       console.log('this.userList: ', this.userList);
-    }
+    },
   }
 }
 </script>
