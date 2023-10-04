@@ -18,24 +18,16 @@ export default {
   data() {
     return {
       userList: [],
-      meta: []
     }
   },
-  mounted() {
-    setTimeout(() => {
-      console.log('this.meta: ', this.meta)
-      this.meta = [
+  head() {
+    return {
+      meta: [
         { property: "og:title", content: 'Particular Title' },
         { property: "og:description", content: 'Particular Desc' },
         { property: "og:image", hid: 'akshit', content: 'https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896' },
         // { property: "twitter:title", content: 'Overriden Title' },
       ]
-      console.log('meta after timeout', this.meta)
-    }, 0);
-  },
-  head() {
-    return {
-      meta: this.meta
     }
   },
   methods: {
