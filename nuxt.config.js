@@ -10,7 +10,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
-      { name: 'title', hid: 'title', content: 'Common Title' }
+      { name: 'title', hid: 'title', content: 'Common Title' },
+      { property: "og:image", content: 'https://res.cloudinary.com/practicaldev/image/fetch/s--64WHtiGW--/c_imagga_scale,f_auto,fl_progressive,h_500,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5bn4kaqoq6uks7rb5r36.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
