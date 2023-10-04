@@ -31,7 +31,7 @@ export default {
         // { property: "twitter:title", content: 'Overriden Title' },
       ]
       console.log('meta after timeout', this.meta)
-    }, 5000);
+    }, 1500);
   },
   head() {
     return {
