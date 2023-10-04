@@ -9,7 +9,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'title', hid: 'title', content: 'Common Title' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -35,7 +36,8 @@ export default {
   pwa: {
     manifest: {
       name: 'My Awesome App',
-      lang: 'fa'
+      lang: 'fa',
+      ogTitle: 'Title from PWA'
     },
     workbox: {
       // cachingExtensions: ['@/plugins/workbox-cache.js']
