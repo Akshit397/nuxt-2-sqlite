@@ -34,7 +34,7 @@ export default {
     meta: [
       { property: "og:title", content: 'Overriden Title' },
       { property: "og:description", content: 'Overriden Desc' },
-      { property: "og:image", content: 'https://imgv3.fotor.com/images/cover-photo-image/a-beautiful-girl-with-gray-hair-and-lucxy-neckless-generated-by-Fotor-AI.jpg' },
+      { property: "og:image", hid: 'akshit', content: 'https://imgv3.fotor.com/images/cover-photo-image/a-beautiful-girl-with-gray-hair-and-lucxy-neckless-generated-by-Fotor-AI.jpg' },
       // { property: "twitter:title", content: 'Overriden Title' },
     ]
   },
